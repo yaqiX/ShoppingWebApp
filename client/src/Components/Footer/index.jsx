@@ -1,5 +1,8 @@
+import "./Footer.scss"
+
 const Footer = () => {
-    return (
+   
+  return (
       <div className="footer">
         <div className="top">
           <div className="item">
@@ -41,12 +44,12 @@ const Footer = () => {
             <span className="copyright">© Copyright 2023. All Rights Reserved</span>
           </div>
           <div className="right">
-            <img src="/img/payment.png" alt="" />
+            {/* <img src="/img/payment.png" alt="" /> */}
           </div>
         </div>
       </div>
     );
   };
   
-  export default Footer;
+export default Footer;
   

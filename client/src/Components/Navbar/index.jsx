@@ -20,27 +20,27 @@ const Navbar = () => {
                         <KeyboardArrowDownOutlinedIcon/>
                     </div>
                     <div className="item">
-                        <Link to="/categories/1">Women</Link>
+                        <Link className="link" to="/categories/1">Women</Link>
                     </div>
                     <div className="item">
-                        <Link to="/categories/2">Men</Link>
+                        <Link className="link" to="/categories/2">Men</Link>
                     </div>
                     <div className="item">
-                        <Link to="/categories/3">Unisex</Link>
+                        <Link className="link" to="/categories/3">Unisex</Link>
                     </div>
                 </div>
                 <div className="center">
-                    <Link to="/">Store Name Here</Link>
+                    <Link className="link" to="/">Store Name Here</Link>
                 </div>
                 <div className="right">
                     <div className="center">
-                        <Link to="">Homepage</Link>
+                        <Link className="link" to="">Homepage</Link>
                     </div>
                     <div className="center">
-                        <Link to="">About</Link>
+                        <Link className="link" to="">About</Link>
                     </div>
                     <div className="center">
-                        <Link to="">Stores</Link>
+                        <Link className="link" to="">Stores</Link>
                     </div>
                     <div className="icons">
                         <SearchOutlinedIcon/>

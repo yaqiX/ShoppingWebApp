@@ -1,5 +1,4 @@
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
-import { Children } from "react";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./pages/Home";
@@ -16,7 +15,7 @@ const Layout = () => {
       <Footer/> 
     </div>
     )
-}
+};
 
 const router = createBrowserRouter([
   {
@@ -37,8 +36,14 @@ const router = createBrowserRouter([
       }
     ]
   }
-])
+]);
 
-
+function App() {
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  )
+};
 
 export default App;
