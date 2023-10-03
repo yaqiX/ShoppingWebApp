@@ -1,4 +1,5 @@
 import Card from "../Card";
+import "./index.scss"
 
 const FeaturedProduct = () => {
     const picData = [
@@ -10,50 +11,48 @@ const FeaturedProduct = () => {
             isNew:true, 
             oldPrice: 19,
             price: 12
-        },]
-    //     // {
-    //     //     id: 2,
-    //     //     img: "https://images.pexels.com/photos/1230945/pexels-photo-1230945.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    //     //     img2: "https://images.pexels.com/photos/1019155/pexels-photo-1019155.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    //     //     title: "Casual Denim Jeans",
-    //     //     isNew: false,
-    //     //     oldPrice: 29,
-    //     //     price: 22
-    //     // },
-    //     // {
-    //     //     id: 3,
-    //     //     img: "https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    //     //     img2: "https://images.pexels.com/photos/774866/pexels-photo-774866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    //     //     title: "Sporty Sneakers",
-    //     //     isNew: true,
-    //     //     oldPrice: 45,
-    //     //     price: 35
-    //     // },
-    //     // {
-    //     //     id: 4,
-    //     //     img: "https://images.pexels.com/photos/4567123/pexels-photo-4567123.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    //     //     img2: "https://images.pexels.com/photos/3585586/pexels-photo-3585586.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    //     //     title: "Cozy Hooded Sweatshirt",
-    //     //     isNew: true,
-    //     //     oldPrice: 39,
-    //     //     price: 29
-    //     // }
-    // ]
+        },
+        {
+            id: 2,
+            img: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+            img2: "https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+            title: "Casual Denim Jeans",
+            isNew: false,
+            oldPrice: 29,
+            price: 22
+        },
+        {
+            id: 3,
+            img: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+            img2: "https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+            title: "Sporty Sneakers",
+            isNew: true,
+            oldPrice: 45,
+            price: 35
+        },
+        {
+            id: 4,
+            img: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+            img2: "https://images.unsplash.com/photo-1475180098004-ca77a66827be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+            title: "Cozy Hooded Sweatshirt",
+            isNew: true,
+            oldPrice: 39,
+            price: 29
+        }
+    ]
 
 
     return (
         <div className="featuredProduct">
-            product
             <div className="top">
                 <h1>Products</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptates quasi quo aperiam nemo minus natus quidem rerum saepe omnis maiores, commodi beatae eligendi neque ipsam iusto suscipit ipsa reiciendis?</p>
             </div>
-            <div className="pic">
-                {picData.map((product,index) => (
-                    <Card key={product.index} item={product}/>
+            <div className="pics">
+                {picData.map((product) => (
+                    <Card key={product.id} item={product}/>
                 ))}
             </div>
-            {/* <img src={picData[0].img} /> */}
         </div>
     )
 }

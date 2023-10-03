@@ -14,31 +14,31 @@
             height: 100%;
             object-fit: cover;
             position: relative;
+        }
 
-            &:hover {
-                .hoverDisplay {
-                    z-index: 2;
-                    max-width: 200px;
-                }
-            
-            }
-
-            .coverDisplay {
-                z-index: 1;
+        &:hover {
+            .hoverDisplay {
+                z-index: 2;
                 max-width: 200px;
             }
-
-            span {
-                position: absolute;
-                top: 5px;
-                left: 5px;
-                background-color: white;
-                color: teal;
-                padding: 3px 5px;
-                z-index: 3;
-                font-weight: 500;
-            }
+        
         }
+
+        .coverDisplay {
+            z-index: 1;
+            // max-width: 200px;
+        }
+
+        span {
+            position: absolute;
+            background-color: white;
+            color: teal;
+            padding: 3px 5px;
+            z-index: 3;
+            font-weight: 500;
+            border-radius: 10px;
+        }
+        
     }
 
     h2 {
@@ -50,14 +50,15 @@
         display: flex;
         gap: 10px;
 
-        .h3 {
+        h3 {
             font-size: 18px;
             font-weight: 500;
-
-            &:first-child {
+            color: red;
+            &:first-child{
                 color: gray;
                 text-decoration: line-through;
             }
         }
-    }
+        }
 }
+

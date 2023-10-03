@@ -1,5 +1,9 @@
 .navbar{
     height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 9999;
     
     .wrapper{
         padding: 10px 30px;
@@ -22,11 +26,13 @@
             display: flex;
             align-items: center; 
             gap: 18px;
+            font-size: 18px;
         }
         
         .center{ 
             font-size: 30px;
             letter-spacing: 2px;
+            color: red;
         }
     
         
