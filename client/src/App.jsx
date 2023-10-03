@@ -1,5 +1,5 @@
-import {createBrowserRouter} from "react-router-dom"
-
+import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
+import { Children } from "react";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./pages/Home";
@@ -38,6 +38,7 @@ const router = createBrowserRouter([
     ]
   }
 ])
+
 
 
 export default App;
