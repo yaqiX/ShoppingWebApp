@@ -1,0 +1,32 @@
+/* Set up the grid container */
+.boxBoard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);  
+    grid-gap: 10px; 
+    margin: 0 auto; 
+
+    .box {
+        padding: 20px;
+        border: 1px solid #ccc; 
+        text-align: center;
+        background-color: #f0f0f0; 
+       
+        
+        &.box1 {
+            grid-column: span 1;
+            grid-row: span 2; 
+        }
+
+        &.box3 {
+            grid-column: span 2;
+        }
+        &.box5 {
+            grid-column: span 2;
+        }
+    
+    }
+    
+}
+
+/* Style for individual boxes */
