@@ -1,5 +1,4 @@
 .card {
-    max-width: 280px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -44,6 +43,7 @@
     h2 {
         font-size: 15px;
         font-weight: bold;
+        margin-bottom: 0;
     }
 
     .priceDisplay {
@@ -51,6 +51,7 @@
         gap: 10px;
 
         h3 {
+            margin-top: 0;
             font-size: 18px;
             font-weight: 500;
             color: red;
