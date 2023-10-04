@@ -12,7 +12,7 @@ const Card = ({ item }) => {
                 </div>
                 <h2>{item.title}</h2>
                 <div className="priceDisplay">
-                    <h3>${item.oldPrice}</h3>
+                    <h3 className="oldPrice">${item.oldPrice}</h3>
                     <h3>${item.price}</h3>
                 </div>
             </div>
