@@ -4,15 +4,39 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);  
     grid-gap: 10px; 
-    margin: 0 auto; 
+    margin: 20px 40px; 
 
     .box {
-        padding: 20px;
-        border: 1px solid #ccc; 
+        position: relative; /* Add this to establish a positioning context */
+        border: 1px solid #ccc;
         text-align: center;
-        background-color: #f0f0f0; 
-       
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        min-height: 200px;
+
         
+      
+        img {
+          max-width: 100%;
+          z-index: 1;
+          object-fit: cover;
+        }
+      
+
+        button{
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            min-width: 50px;
+            height: 30px;
+            background-color: wheat;
+            z-index: 2;
+            border-radius: 5px;
+            font-size: 1.2rem ;
+        }
+
         &.box1 {
             grid-column: span 1;
             grid-row: span 2; 
@@ -20,9 +44,11 @@
 
         &.box3 {
             grid-column: span 2;
+            max-width: 800px;
         }
         &.box5 {
             grid-column: span 2;
+            max-width: 800px;
         }
     
     }
