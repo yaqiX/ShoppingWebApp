@@ -29,8 +29,8 @@ const DisplayBoard = () => {
             <div className="box box4">
                 <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmFzaGlvbnxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60" alt="button" />
                 <button>
-                    {/* <Link to="/catogories/sale">Sale</Link> */}
-                    sale
+                    <Link to="/categories/1">Sale</Link>
+                
                 </button>
             </div>
             <div className="box box5">
