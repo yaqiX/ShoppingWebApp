@@ -1,6 +1,6 @@
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-
+import "./index.scss"
 
 import { useState } from "react";
 
@@ -40,7 +40,12 @@ const Product = () => {
                     {quantityToAdd}
                     <button onClick={e=>setQuantityToAdd(quantityToAdd+1)}>+</button>
                     <label>How many you want?</label>
-                    <button className="cart">Add to cart</button>
+                    <button className="cart">
+                        <AddShoppingCartOutlinedIcon/>Add to cart
+                    </button>
+                    <div className="addFav">
+                        <button><FavoriteBorderOutlinedIcon/></button>
+                    </div>
                 </div>
             </div>
 

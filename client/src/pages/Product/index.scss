@@ -1,0 +1,49 @@
+.productPage{
+    margin: 20px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .picDisplay{
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1fr 1fr;
+        border: 1px solid red;
+        gap: 10px;
+        padding-right: 50px;
+
+
+        .picThumbnail{
+            display: flex;
+            flex-direction: column;
+            flex:span 1;
+            gap: 20px;
+            grid-row: span 2;
+
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+
+        .displayImg{
+            grid-column: span 4;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+                max-height: 600px;
+            }
+            
+        }
+
+    }
+
+    .productDisplay{
+        margin-top: 100px;
+
+    }
+
+}
