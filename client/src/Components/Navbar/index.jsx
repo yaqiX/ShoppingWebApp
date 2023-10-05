@@ -20,6 +20,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     padding: '0 4px',
   },
 }));
+
+
 const Navbar = () => {
     return(
         <div className='navbar'>
