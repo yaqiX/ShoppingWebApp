@@ -1,5 +1,11 @@
 import "./Footer.scss"
 
+
+import StoreOutlinedIcon from '@mui/icons-material/StoreOutlined';
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import AutoModeOutlinedIcon from '@mui/icons-material/AutoModeOutlined';
+//change or return
+
 const Footer = () => {
    
   return (

@@ -3,9 +3,23 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+
+
 import {Link} from "react-router-dom"
 import "./index.scss"
 
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import Badge from '@mui/material/Badge';
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+  },
+}));
 const Navbar = () => {
     return(
         <div className='navbar'>
@@ -46,10 +60,15 @@ const Navbar = () => {
                         <SearchOutlinedIcon/>
                         <AccountCircleOutlinedIcon/>
                         <FavoriteBorderOutlinedIcon/>
-                        <div className="cartIcon">
+                        {/* <div className="cartIcon">
                             <ShoppingCartOutlinedIcon/>
                             <span>0</span>
-                        </div>
+                        </div> */}
+                        <IconButton aria-label="cart">
+                            <StyledBadge badgeContent={4} color="secondary">
+                                <ShoppingCartOutlinedIcon/>
+                            </StyledBadge>
+                        </IconButton>
                     </div>
                 </div>
             </div>
