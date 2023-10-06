@@ -1,4 +1,5 @@
-import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
+import {createBrowserRouter, RouterProvider, Outlet, BrowserRouter} from "react-router-dom";
+// import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./pages/Home";

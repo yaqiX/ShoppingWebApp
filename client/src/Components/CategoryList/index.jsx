@@ -1,5 +1,5 @@
 import Card from "../Card";
-import "./index.scss"
+import "./index.scss";
 
 const CategoryList = () => {
     const prodData = [

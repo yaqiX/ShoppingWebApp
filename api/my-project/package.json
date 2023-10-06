@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "my-project",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -14,13 +14,13 @@
     "@strapi/strapi": "4.14.3",
     "@strapi/plugin-users-permissions": "4.14.3",
     "@strapi/plugin-i18n": "4.14.3",
-    "mysql": "2.18.1"
+    "better-sqlite3": "8.6.0"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "88e47b89-ff77-45cb-8102-23e89b2698ac"
+    "uuid": "c2c8d0e0-a07a-4ff6-84e1-ec2381a3927c"
   },
   "engines": {
     "node": ">=16.0.0 <=20.x.x",

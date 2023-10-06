@@ -51,7 +51,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="center">
-                    <Link className="link" to="/">Store Name Here</Link>
+                    <Link className="link" to="/">Module II</Link>
                 </div>
                 <div className="right">
                     <div className="right">
