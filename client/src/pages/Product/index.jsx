@@ -32,6 +32,9 @@ const Product = () => {
                 <h2>Product Name Here</h2>
                 <span>$13</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sed expedita modi cupiditate sequi magni at quasi nesciunt qui asperiores. Quae quibusdam quod modi facilis amet cupiditate ducimus fuga nesciunt?</p>
+                <div className="selectColor">
+                    
+                </div>
                 <div className="addToCart">
                     <button 
                         onClick={e=>setQuantityToAdd(quantityToAdd-1)}
@@ -39,12 +42,12 @@ const Product = () => {
                         >-</button>
                     {quantityToAdd}
                     <button onClick={e=>setQuantityToAdd(quantityToAdd+1)}>+</button>
-                    <label>How many you want?</label>
-                    <button className="cart">
+                    {/* <label>How many you want?</label> */}
+                    <button className="cartButton">
                         <AddShoppingCartOutlinedIcon/>Add to cart
                     </button>
                     <div className="addFav">
-                        <button><FavoriteBorderOutlinedIcon/></button>
+                        <button><FavoriteBorderOutlinedIcon/></button>Add to Favorite
                     </div>
                 </div>
             </div>

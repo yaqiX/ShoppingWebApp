@@ -6,11 +6,14 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 
 
 import {Link} from "react-router-dom"
+import Cart from "../Cart"
+
 import "./index.scss"
 
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
+import { useState } from 'react';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -23,6 +26,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 
 const Navbar = () => {
+
+    const [open, setOpen] = useState(false);
     return(
         <div className='navbar'>
             <div className="wrapper">
@@ -66,7 +71,7 @@ const Navbar = () => {
                             <ShoppingCartOutlinedIcon/>
                             <span>0</span>
                         </div> */}
-                        <IconButton aria-label="cart">
+                        <IconButton aria-label="cart" className='cartIcon' onClick={()=>setOpen(!open)}>
                             <StyledBadge badgeContent={4} color="secondary">
                                 <ShoppingCartOutlinedIcon/>
                             </StyledBadge>
@@ -74,7 +79,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-
+                {open && <Cart/>}
         </div>
     )
 }

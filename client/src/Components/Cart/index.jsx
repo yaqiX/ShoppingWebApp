@@ -34,16 +34,17 @@ const Cart = () =>{
                         <h2>{item.title}</h2>
                         <div className="itemPrice">
                             ${item.price}
+                            <span className="delete"><ClearOutlinedIcon /></span>
                         </div>
-                        <ClearOutlinedIcon/>
+                        
                     </div>
                 </div>
             ))}
             <div className="ttl">
-                <span>Total</span>
+                <span>Total </span>
                 <span>$</span>
             </div>
-            <button><ShoppingCartCheckoutOutlinedIcon/>Proceed</button>
+            <button className="checkOut"><ShoppingCartCheckoutOutlinedIcon/>Proceed</button>
         </div>
     )
 }
