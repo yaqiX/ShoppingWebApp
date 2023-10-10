@@ -4,49 +4,37 @@ import Card from "../Card";
 import "./index.scss";
 
 const FeaturedProduct = () => {
-  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:1337/api/categories`);
-        console.log("fetch success", response.data);
-        
-        // Update the state with the fetched data
-        setProducts(response.data); // Assuming your response data is an array
-        console.log(typeof response) 
-      } catch (err) {
-        console.log("Error fetching data:", err);
+        const response = await axios.get('http://localhost:1337/api/products?populate=*');
+        // http://localhost:1337/uploads/alexandra_iva_a_PIN_2_ITQ_2_M_unsplash_ea576d9e69.jpg
+       
+        // http://localhost:5173/[object%20Object] const img1.attribute.url
+        console.log('Fetch success'); // Log success message
+      
+        console.log('Fetched category data:', response.data.data); // Log fetched data
+        setCategories(response.data.data);
+      } catch (error) {
+        setError(error);
+        console.error('Error fetching data:', error);
       }
     };
-  
+
     fetchData();
   }, []);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // const response = await axios.get(`http://localhost:1337/api/categories`).then(
-          
-  //       // );
-  //       const response = await axios.get(`http://localhost:1337/api/categories`).then(
-  //         response => {
-  //           console.log("fetch success",response.data);
-  //         }
-  //       );
-      
-  //       // Update the state with the fetched data
-       
-  //     } catch (err) {
-  //       console.log("Error fetching data:", err);
-  //     }
-  //   };
 
-  //   fetchData();
-  // },[]); 
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div className="featuredProduct">
       <div className="top">
+        {categories.attributes}
         <h1>Products</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
@@ -56,11 +44,13 @@ const FeaturedProduct = () => {
         </p>
       </div>
       <div className="pics">
-        {/* {products.map((product) => (
-          <Card key={product.id} item={product} />
-        ))} */}
-        {products.data}
-        
+        {categories.length > 0 ? (
+          categories.map((item) => (
+            <Card key={item.id} item={item.attributes}/>
+          ))
+        ) : (
+          <p>Loading categories...</p>
+        )}
       </div>
     </div>
   );

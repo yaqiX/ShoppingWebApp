@@ -7,13 +7,15 @@ const Card = ({ item }) => {
             <div className="card">
                 <div className="image">
                     {item.isNew && <span>New Season</span>}
-                    <img src={item.img} alt="item" className="coverDisplay" />
-                    <img src={item.img2} alt="item" className="hoverDisplay" />
+                    <img src={`http://localhost:1337${item.img1.data.attributes.url}`} alt="item" className="coverDisplay" />
+
+                    {/* <img src={item.img1.data.attributes.formats.thumbnail.url} alt="item" className="hoverDisplay" /> */}
+                    {/* data.attributes.formats.thumbnail.url */}
                 </div>
                 <h2>{item.title}</h2>
                 <div className="priceDisplay">
-                    <h3 className="oldPrice">${item.oldPrice}</h3>
-                    <h3>${item.price}</h3>
+                    <h3 className="oldPrice">${item.price}</h3>
+                    <h3>${item.price+20}</h3>
                 </div>
             </div>
         </Link>
