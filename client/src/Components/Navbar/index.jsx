@@ -51,7 +51,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="center">
-                    <Link className="link" to="/">Module II</Link>
+                    <Link className="link" to="/">MODULE II</Link>
                 </div>
                 <div className="right">
                     <div className="right">
@@ -67,10 +67,6 @@ const Navbar = () => {
                         <SearchOutlinedIcon/>
                         <AccountCircleOutlinedIcon/>
                         <FavoriteBorderOutlinedIcon/>
-                        {/* <div className="cartIcon">
-                            <ShoppingCartOutlinedIcon/>
-                            <span>0</span>
-                        </div> */}
                         <IconButton aria-label="cart" className='cartIcon' onClick={()=>setOpen(!open)}>
                             <StyledBadge badgeContent={4} color="secondary">
                                 <ShoppingCartOutlinedIcon/>

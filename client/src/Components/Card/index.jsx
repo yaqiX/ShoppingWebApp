@@ -8,9 +8,6 @@ const Card = ({ item }) => {
                 <div className="image">
                     {item.isNew && <span>New Season</span>}
                     <img src={`http://localhost:1337${item.img1.data.attributes.url}`} alt="item" className="coverDisplay" />
-
-                    {/* <img src={item.img1.data.attributes.formats.thumbnail.url} alt="item" className="hoverDisplay" /> */}
-                    {/* data.attributes.formats.thumbnail.url */}
                 </div>
                 <h2>{item.title}</h2>
                 <div className="priceDisplay">

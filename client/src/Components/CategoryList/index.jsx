@@ -11,9 +11,7 @@ const CategoryList = ({type}) => {
     const fetchData = async () => {
       try {
         const response = await axios.get('http://localhost:1337/api/products?populate=*');
-        // http://localhost:1337/uploads/alexandra_iva_a_PIN_2_ITQ_2_M_unsplash_ea576d9e69.jpg
-       
-        // http://localhost:5173/[object%20Object] const img1.attribute.url
+    
         console.log('Fetch success'); // Log success message
       
         console.log('Fetched category data:', response.data.data); // Log fetched data
@@ -35,7 +33,7 @@ const CategoryList = ({type}) => {
     return(
         <div className="list">
             {prodData.map(prod => (
-                <Card item={prod} key={prod.id}/>
+                <Card item={prod.attributes} key={prod.id}/>
             ))}
         </div>
     )
