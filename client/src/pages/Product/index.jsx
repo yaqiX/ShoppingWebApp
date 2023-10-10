@@ -1,8 +1,8 @@
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import "./index.scss"
-
-import { useState } from "react";
+import axios from 'axios';
+import { useState,useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 
@@ -10,17 +10,31 @@ import useFetch from '../../hooks/useFetch';
 
 const Product = () => {
 
-    // const imgs = [
-    //     "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60",
-    //     "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbnxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60"
-
-    // ];
     const id = useParams().id
     const [imgURL, setImgURL] = useState(0);
     const [quantityToAdd, setQuantityToAdd] = useState(1);
+    const [data, setData] = useState([]);
+    const [error, setError] = useState(null);
 
-    const {data, loading, error} =useFetch(`http://localhost:1337/api/products/1?populate=*`)
-    // `http://localhost:1337${item.img1.data.attributes.url}`
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            // const response = await axios.get(`http://localhost:1337/api/products?populate=*&[filters][categories.][$eq]=${Women}`);
+            const response = await axios.get(`http://localhost:1337/api/products${id}?populate=*`);
+        
+            console.log('Fetch success'); // Log success message
+          
+            console.log('Fetched category data:', response.data); // Log fetched data
+            setData(response.data);
+          } catch (error) {
+            setError(error);
+            console.error('Error fetching data:', error);
+          }
+        }}
+    )
+
+    // const {data, loading, error} =useFetch(`http://localhost:1337/api/products/${id}?populate=*`)
+    // // `http://localhost:1337${item.img1.data.attributes.url}`
     return(
         <div className="productPage">
             <div className="picDisplay">

@@ -10,7 +10,8 @@ const CategoryList = ({type}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:1337/api/products?populate=*');
+        // const response = await axios.get(`http://localhost:1337/api/products?populate=*&[filters][categories.][$eq]=${Women}`);
+        const response = await axios.get(`http://localhost:1337/api/products?populate=*`);
     
         console.log('Fetch success'); // Log success message
       

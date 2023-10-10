@@ -1,9 +1,11 @@
 .footer {
-    margin: 100px 200px 20px 200px;
+    margin: 100px 100px ;
+    
     
     .top {
       display: flex;
       gap: 50px;
+      justify-content: space-between;
       
       .item {
         flex: 1;
@@ -11,11 +13,12 @@
         flex-direction: column;
         gap: 10px;
         text-align: justify;
+        justify-content: space-around;
         font-size: 14px;
   
         h1 {
           font-size: 18px;
-          color: lightgrey;
+          color: darkslategrey;
         }
   
         span {

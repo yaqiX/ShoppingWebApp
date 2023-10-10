@@ -6,9 +6,9 @@ import { useState } from 'react';
 
 const Slider = () => {
   const data = [
-    "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    "https://images.unsplash.com/photo-1544957992-20514f595d6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb258ZW58MHwwfDB8fHww&auto=format&fit=crop&w=900&q=60",
+    "https://images.unsplash.com/flagged/photo-1570733117311-d990c3816c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZhc2hpb258ZW58MHwwfDB8fHww&auto=format&fit=crop&w=900&q=60",
+    "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fGZhc2hpb258ZW58MHwwfDB8fHww&auto=format&fit=crop&w=900&q=60"
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0)

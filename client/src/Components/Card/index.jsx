@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./index.scss"
 
 const Card = ({ item }) => {
+    console.log("item is this",item);
     return (
         <Link className="link" to={`/product/${item.id}`}>
             <div className="card">
@@ -12,7 +13,7 @@ const Card = ({ item }) => {
                 <h2>{item.title}</h2>
                 <div className="priceDisplay">
                     <h3 className="oldPrice">${item.price}</h3>
-                    <h3>${item.price+20}</h3>
+                    <h3>${(item.price+20).toFixed(2)}</h3>
                 </div>
             </div>
         </Link>
