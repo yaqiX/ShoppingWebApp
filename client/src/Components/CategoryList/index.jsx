@@ -14,7 +14,7 @@ const CategoryList = ({type}) => {
     
         console.log('Fetch success'); // Log success message
       
-        console.log('Fetched category data:', response.data.data); // Log fetched data
+        console.log('Fetched category data:', response.data); // Log fetched data
         setProdData(response.data.data);
       } catch (error) {
         setError(error);
