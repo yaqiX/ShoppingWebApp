@@ -16,18 +16,19 @@ const Product = () => {
     const [quantityToAdd, setQuantityToAdd] = useState(1);
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
+    // const [img1, setImg1] = useState();
+    // const [img2, setImg2] = useState();
 
     useEffect(() => {
         const fetchData = async () => {
             console.log(productId);
           try {
-            // const response = await axios.get(`http://localhost:1337/api/products?populate=*&[filters][categories.][$eq]=${Women}`);
             const response = await axios.get(`http://localhost:1337/api/products/${productId}?populate=*`);
-        
-            console.log('Fetch success'); // Log success message
-          
-            console.log('Fetched category data:', response.data.data); // Log fetched data
+            console.log('Fetched category data:', response.data.data); 
             setData(response.data.data);
+            // setImg1(`http://localhost:1337${data?.attributes?.img1?.data?.attributes?.url}`)
+            // console.log(img1);
+            // setImg2(`http://localhost:1337${data?.attributes?.img2?.data?.attributes?.url}`)
           } catch (error) {
             setError(error);
             console.error('Error fetching data:', error);
@@ -42,9 +43,9 @@ const Product = () => {
         <div className="productPage">
             <div className="picDisplay">
                 <div className="picThumbnail">
-                   
                      <img src={`http://localhost:1337${data?.attributes?.img1?.data?.attributes?.url}`} onClick={e=>setImgURL(`http://localhost:1337${data?.attributes?.img1?.data?.attributes?.url}`)}/>
                      <img src={`http://localhost:1337${data?.attributes?.img2?.data?.attributes?.url}`} onClick={e=>setImgURL(`http://localhost:1337${data?.attributes?.img2?.data?.attributes?.url}`)}/> 
+                       {/* <img src={img1} onClick={e=>setImgURL(img1)}/> */}
                 </div>
                 <div className="displayImg">
                     <img src={imgURL}/>
@@ -54,7 +55,6 @@ const Product = () => {
                 <h2>{data.attributes.title}</h2>
                 <span>${data.attributes.price}</span>
                 <p>{data.attributes.description}</p>
-               
                 <div className="addToCart">
                     <button 
                         onClick={e=>setQuantityToAdd(quantityToAdd-1)}
@@ -62,7 +62,6 @@ const Product = () => {
                         >-</button>
                     {quantityToAdd}
                     <button onClick={e=>setQuantityToAdd(quantityToAdd+1)}>+</button>
-                    {/* <label>How many you want?</label> */}
                     <button className="cartButton">
                         <AddShoppingCartOutlinedIcon/>Add to cart
                     </button>
