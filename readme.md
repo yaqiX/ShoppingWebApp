@@ -1,6 +1,7 @@
 # E-Commerce Clothing 
 
-Welcome to our e-commerce project! This project is a simple online store where users can browse products, view product details, add products to their cart, and edit the cart.
+Welcome to our e-commerce project! This project is a simple online store [**Module II**](https://moduleiiweb.onrender.com "Module II")where users can browse products, select category, check new season product, view product details, add products to their cart, and edit the cart.
+
 
 ## Table of Contents
 
@@ -29,13 +30,13 @@ To get started with this project, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yaqiX/ShoppingWebApp.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd e-commerce-project
+   cd client
    ```
 
 3. Install project dependencies:
@@ -66,7 +67,7 @@ The project is organized as follows:
 - `src/`: Contains the source code for the React application.
   - `components/`: Reusable UI components.
   - `pages/`: React components for different pages (e.g., homepage, products, product details, cart).
-  - `services/`: API services for fetching product data.
+  - `api/my-project`: API services for fetching product data.
   - `styles/`: CSS and SCSS files for styling.
 - `public/`: Contains static assets (e.g., images).
 - `package.json`: Defines project dependencies and scripts.
