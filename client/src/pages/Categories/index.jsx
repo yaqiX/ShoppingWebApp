@@ -4,8 +4,9 @@ import { useState } from "react";
 import "./index.scss"
 
 const Categories = () => {
-
-    const categoryID = parseInt(useParams().id)
+// http://localhost:5173/categories/1
+    const categoryID = 1
+    // const categoryID = parseInt(useParams().id)
     const [maxPrice, setMaxPrice] = useState(1000)
     const [sort, setSort] = useState("asc");
 
@@ -60,7 +61,7 @@ const Categories = () => {
                     </div>
             </div>
             <div className="products">
-                <CategoryList categoryID={categoryID} maxPrice={maxPrice} sort={sort}/>
+                <CategoryList categoryID={categoryID}/>
             </div>
             </div>
 

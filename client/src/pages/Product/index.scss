@@ -9,7 +9,7 @@
         grid-template-columns: repeat(5,1fr);
         grid-template-rows: 1fr 1fr;
         gap: 10px;
-        padding-right: 50px;
+        // padding-right: 20px;
 
 
         .picThumbnail{
@@ -21,7 +21,6 @@
 
             img{
                 width: 100%;
-               
                 object-fit: cover;
                 cursor: pointer;
             }
@@ -31,9 +30,10 @@
             grid-column: span 4;
          
             img{
+                min-height: 800px;
                 width: 100%;
                 object-fit: cover;
-                max-height: 600px;
+                // max-height: 600px;
                 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
             }

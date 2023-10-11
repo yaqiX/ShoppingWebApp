@@ -10,7 +10,8 @@ import useFetch from '../../hooks/useFetch';
 
 const Product = () => {
 
-    const id = useParams().id
+    // const productId = parseInt(useParams().id)
+    const productId = 1
     const [imgURL, setImgURL] = useState(0);
     const [quantityToAdd, setQuantityToAdd] = useState(1);
     const [data, setData] = useState([]);
@@ -18,20 +19,22 @@ const Product = () => {
 
     useEffect(() => {
         const fetchData = async () => {
+            console.log(productId);
           try {
             // const response = await axios.get(`http://localhost:1337/api/products?populate=*&[filters][categories.][$eq]=${Women}`);
-            const response = await axios.get(`http://localhost:1337/api/products${id}?populate=*`);
+            const response = await axios.get(`http://localhost:1337/api/products/${productId}?populate=*`);
         
             console.log('Fetch success'); // Log success message
           
-            console.log('Fetched category data:', response.data); // Log fetched data
-            setData(response.data);
+            console.log('Fetched category data:', response.data.data); // Log fetched data
+            setData(response.data.data);
           } catch (error) {
             setError(error);
             console.error('Error fetching data:', error);
           }
-        }}
-    )
+        }        
+        fetchData();
+    }, [productId]);
 
     // const {data, loading, error} =useFetch(`http://localhost:1337/api/products/${id}?populate=*`)
     // // `http://localhost:1337${item.img1.data.attributes.url}`
@@ -39,14 +42,11 @@ const Product = () => {
         <div className="productPage">
             <div className="picDisplay">
                 <div className="picThumbnail">
-                    {/* <img src={imgs[0]} onClick={e=>setImgIndex(0)}/>
-                     */}
+                   
                      <img src={`http://localhost:1337${data?.attributes?.img1?.data?.attributes?.url}`} onClick={e=>setImgURL(`http://localhost:1337${data?.attributes?.img1?.data?.attributes?.url}`)}/>
-                     <img src={`http://localhost:1337${data?.attributes?.img2?.data?.attributes?.url}`} onClick={e=>setImgURL(`http://localhost:1337${data?.attributes?.img2?.data?.attributes?.url}`)}/>
-                    {/* <img src={imgs[1]} onClick={e=>setImgIndex(1)}/> */}
+                     <img src={`http://localhost:1337${data?.attributes?.img2?.data?.attributes?.url}`} onClick={e=>setImgURL(`http://localhost:1337${data?.attributes?.img2?.data?.attributes?.url}`)}/> 
                 </div>
                 <div className="displayImg">
-                    {/* <img src={imgs[imgIndex]}/> */}
                     <img src={imgURL}/>
                 </div>
             </div>
